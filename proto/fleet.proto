@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package fleet;
+
+service FleetService {
+  // Consulta o status de um veículo específico
+  rpc GetVehicleStatus (VehicleRequest) returns (VehicleResponse);
+}
+
+message VehicleRequest {
+  string vehicle_id = 1;
+}
+
+message VehicleResponse {
+  string vehicle_id = 1;
+  double average_speed = 2;
+  string status = 3;
+  string last_updated = 4;
+}

@@ -1,0 +1,14 @@
+# implementacao grpc
+
+/grpc/venv
+/grpc/python/EmployeeService_pb2_grpc.py
+/grpc/python/EmployeeService_pb2.py
+/grpc/python/__pycache__
+/grpc/.vscode
+
+# implementação kafka
+
+__pycache__/
+venv/
+
+
