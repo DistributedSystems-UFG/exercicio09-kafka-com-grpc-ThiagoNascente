@@ -6,8 +6,13 @@ somente pela máquina da aws (quatro máquinas - <tipo>)
 
 - 5 máquinas t3-small (aws)
 - Todas compartilhando a pasta /mnt/efs/fs1
+- Portas 9092, 50051
 
 ### Maquina 1
+
+```bash
+cd /mnt/
+```
 
 ```bash
 sudo apt update
@@ -57,18 +62,48 @@ bin/kafka-topics.sh --create --topic eventos-frota --bootstrap-server localhost:
 
 ### Maquina 2
 
+- Cria e ativa o ambiente virtual
+
+```bash
+python3 -m venv venv
+```
+
+```bash
+source venv/bin/activate
+```
+
+- Instala as dependências
+
+```bash
+pip3 install confluent-kafka grpcio grpcio-tools
+```
+
+- Compilar
+
+```bash
+python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. proto/fleet.proto
+```
+
+```bash
+python 3_server.py
+```
+
 ### Maquina 3
+
+```bash
+python 2_processor.py
+```
 
 ### Maquina 4
 
+```bash
+python 1_sensor.py
+```
+
 ### Maquina 5
 
-# Kafka
-
-> Fluxo para ajeitar o kafka
-
-# Grpc
-
-> Fluxo para ajeitar o Grpc
+```bash
+python 4_client.py
+```
 
 
