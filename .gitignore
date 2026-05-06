@@ -1,10 +1,10 @@
 # implementacao grpc
 
-/grpc/venv
-/grpc/python/EmployeeService_pb2_grpc.py
-/grpc/python/EmployeeService_pb2.py
-/grpc/python/__pycache__
-/grpc/.vscode
+
+
+proto/fleet_pb2_grpc.py
+proto/fleet_pb2.py
+fleet.db
 
 # implementação kafka
 
