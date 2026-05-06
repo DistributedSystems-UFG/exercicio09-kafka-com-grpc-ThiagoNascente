@@ -2,11 +2,11 @@ import json
 from confluent_kafka import Consumer, Producer
 
 consumer = Consumer({
-    'bootstrap.servers': 'localhost:9092',
+    'bootstrap.servers': '54.162.220.194:9092',
     'group.id': 'grupo-processamento',
     'auto.offset.reset': 'latest'
 })
-producer = Producer({'bootstrap.servers': 'localhost:9092'})
+producer = Producer({'bootstrap.servers': '54.162.220.194:9092'})
 
 topic_in = 'telemetria-bruta'
 topic_out = 'eventos-frota'

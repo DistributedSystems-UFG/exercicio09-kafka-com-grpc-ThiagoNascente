@@ -5,7 +5,7 @@ from confluent_kafka import Producer
 from datetime import datetime
 
 # Configuração do Kafka
-producer = Producer({'bootstrap.servers': 'localhost:9092'})
+producer = Producer({'bootstrap.servers': '54.162.220.194:9092'})
 topic = 'telemetria-bruta'
 vehicle_id = 'CAMINHAO-001'
 

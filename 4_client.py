@@ -6,7 +6,7 @@ import time
 def run():
     print("Iniciando cliente gRPC do Gestor de Frota...")
     # Conecta ao servidor gRPC
-    with grpc.insecure_channel('localhost:50051') as channel:
+    with grpc.insecure_channel('98.81.121.168:50051') as channel:
         stub = fleet_pb2_grpc.FleetServiceStub(channel)
         
         vehicle_id = "CAMINHAO-001"

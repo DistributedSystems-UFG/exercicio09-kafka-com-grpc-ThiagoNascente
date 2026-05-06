@@ -28,7 +28,7 @@ db_conn = setup_db()
 # 2. Worker do Kafka (Consome eventos e salva no DB)
 def kafka_consumer_worker():
     consumer = Consumer({
-        'bootstrap.servers': 'localhost:9092',
+        'bootstrap.servers': '54.162.220.194:9092',
         'group.id': 'grupo-webservice',
         'auto.offset.reset': 'latest'
     })
