@@ -11,7 +11,7 @@ somente pela máquina da aws (quatro máquinas - <tipo>)
 ### Maquina 1
 
 ```bash
-cd /mnt/
+cd /mnt/efs/fs1
 ```
 
 ```bash
